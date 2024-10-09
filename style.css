@@ -33,6 +33,7 @@ body {
 
   /*background: color image no repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -69,7 +70,6 @@ body * {
   position: relative;
   width: 64px;
   margin: 4px auto;
-  
 }
 
 #switch button {
@@ -88,8 +88,7 @@ body * {
 
 .light #switch button {
   right: 0;
-  left:initial;
-
+  left: initial;
 }
 
 #switch span {
@@ -157,4 +156,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assests/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assests/bg-desktop-light.jpg);
+  }
 }
